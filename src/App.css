@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  width: 85%;
+  margin: 0 auto;
+}
+.country {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-gap: 10px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 20px;
+  overflow: auto;
+}
+.country .flag img {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.country .content {
+  font-family: "Courier New", Courier, monospace;
+}
+li {
+  list-style: number;
+  margin-left: 30px;
+}
+@media (max-width: 1050px) {
+  .App {
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+  }
+}
+@media (max-width: 750px) {
+  .App {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+}
+@media (max-width: 750px) {
+  .App {
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+  }
+}
